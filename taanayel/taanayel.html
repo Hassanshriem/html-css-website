@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.cdnfonts.com/css/solena" rel="stylesheet">
+    <link rel = "icon" href ="../images/baalbak-details.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/divider.css">
+    <title>Visit Lebanon-Taanayel</title>
+</head>
+<body>
+    <header>
+        <p id="logo">Welcome To Lebanon</p>
+        <nav>
+          <menu>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+          </menu>
+        </nav>
+    </header>
+    <main>
+        <section class="grid-container">
+            <aside > 
+                <figure>
+                    <img src="../images/ammiq.jpg" alt="Ammiq Main Image Not Found">
+                    <figcaption>Ammiq, Beqaa, Lebanon.</figcaption>
+                  </figure>
+            </aside>
+            <aside"> 
+                <h2> Historical Background</h2>
+                About an hour and 20 minutes from Beirut is a dreamlike location hidden in West Bekaa and situated about 7 km from Qab Elias: Ammiq.
+                With its picturesque natural surroundings and its ecological diversity, it’s hard sometimes to believe a place like this exists in Lebanon.
+                Ammiq is located in one of the most fertile parts of the Bekaa Valley. The village is known for its green lands and rich flora and fauna.
+                The Ammiq Wetland is the last significant freshwater wetland in Lebanon. It is living proof of the many marshes that once existed in the region.
+                In 1999, it was declared Ramsar site number 978
+                “Rain and snow falling on the high ridge of Jabal Barouk to the west provide water for the wetland,” states A Rocha Lebanon, an organization founded 
+                in 1996 dedicated to saving the Aammiq marshes from destruction.
+                According to A Rocha Lebanon, Aammiq lies on one of the most important bird migration routes in the world. There have been over 250 species of birds 
+                recorded in the area.
+                This includes “the globally vulnerable Great Spotted Eagle Aquila clanga, Imperial Eagle Aquila heliaca, and Lesser Kestrel Falco naumanni.”
+                In addition to the birds, you’ll be surprised to find water buffaloes grazing near the wetland and even diving in for a swim. Water buffaloes were 
+                introduced into
+                 the area to maintain the health of the swamp.
+                 Due to Ammiq’s increasing popularity, many hiking trips are organized to explore the wetlands and visit the serene village.
+                 Bikes are available to rent at the entrance to the wetland. You can wader through the area and discover the natural beauty hidden in Ammiq.
+                </aside>
+        </section>
+        <div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
+        <section>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="../images/taanayel-details/taanayel-details1.jpg" style="width:100%">
+                  <div class="text">Caption One</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="../images/taanayel-details/taanayel-details2.jpg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="../images/taanayel-details/taanayel-details3.jpg" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+        </section>
+    </main>
+    <footer>
+        <h4> &copy;2022 Lebanon ministry of tourism. website by Hassan | www.hassan.com</h4>
+    </footer>
+</body>
+</html>

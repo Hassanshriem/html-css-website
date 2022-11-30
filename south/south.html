@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.cdnfonts.com/css/solena" rel="stylesheet">
+    <link rel = "icon" href ="../images/baalbak-details.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/divider.css">
+    <title>Visit Lebanon-South</title>
+</head>
+<body>
+    <header>
+        <p id="logo">Welcome To Lebanon</p>
+        <nav>
+          <menu>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+          </menu>
+        </nav>
+    </header>
+    <main>
+        <section class="grid-container">
+            <aside > 
+                <figure>
+                    <img src="../images/south.jpg" alt="South Main Image Not Found">
+                    <figcaption>Mlita, South, Lebanon.</figcaption>
+                  </figure>
+            </aside>
+            <aside"> 
+                <h2> Historical Background</h2>
+                Debbane Palace is an 18th-century building in Saida, built by Ali Hammoud in 1721.
+                The palace features typical diwans (Oriental-style living rooms), a long narrow-front hallway,
+                several rooms, and an open-air courtyard with decorative brown and white stripes of stone and intricate mosaic
+                tiles typical of the Ottoman period.ef Debbane bought the house in 1800, and the family 
+                lived there for generations. After moving into the building, he built another level to accommodate the 
+                family. However, in 1978 the Debbane family was forced to leave their home due to the Lebanese Civil War. Then in 1982, Israel’s 
+                attacked Lebanon, bombarding the Debbane Palace’s area. The house was almost destroyed when the Debbane family returned after the War.
+                The restoration process, which began in 2000, brought life to the home and today receives over 2,000 visitors from around the world each year.
+                One of the most significant bathhouses in the ancient city of Saida is the Hammam Al-Jadeed, built-in 1720. This hammam was boarded up and crumbled
+                 for over 70 years until Said Bacho, Founder and Chairman of Sharqy Foundation for Cultural Development acquired the building in 2008. Today, 
+                 the hammam hosts an art exhibition to bring life back into this beautiful site.
+                 One of Lebanon’s beautiful jewels is the city of Jezzine in South Lebanon. Surrounded by mountain peaks and pine forests, it promises visitors stunning scenery,
+                 beautiful weather, and fantastic food.
+                 Jezzine is famous for its handcrafted knives that take the form of a phoenix. It is also known for the stunning waterfall.
+                </aside>
+        </section>
+        <div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
+        <section>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="../images/south-details/south-details1.jpg" style="width:100%">
+                  <div class="text">Caption One</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="../images/south-details/south-details2.jpg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="../images/south-details/south-details3.jpg" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+        </section>
+    </main>
+    <footer>
+        <h4> &copy;2022 Lebanon ministry of tourism. website by Hassan | www.hassan.com</h4>
+    </footer>
+</body>
+</html>

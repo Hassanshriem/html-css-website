@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.cdnfonts.com/css/solena" rel="stylesheet">
+    <link rel = "icon" href ="../images/baalbak-details.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/divider.css">
+    <title>Visit Lebanon-Baalback</title>
+</head>
+<body>
+    <header>
+        <p id="logo">Welcome To Lebanon</p>
+        <nav>
+          <menu>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+          </menu>
+        </nav>
+    </header>
+    <main>
+        <section class="grid-container">
+            <aside> 
+                <figure>
+                    <img src="../images/baalbak-details.jpg" alt="Baalback Main Image Not Found">
+                    <figcaption>Baalback, Beqaa, Lebanon.</figcaption>
+                  </figure>
+            </aside>
+            <aside > 
+                <h2> Historical Background</h2>
+                    Though they are mere ruins, these temples attract visitors and arouse their admiration. In 1898, a German archeological expedition was the first 
+                    to undergo excavation and repair works. In 1922, archeological researchers and French architects continued to excavate; and after the Independence (1943),
+                    the General Directorate of Antiquities in Lebanon undertook the responsibility of 
+                    supervising those works.The construction of the temples dates back to the end of the 3rd millennium B.C.The date is not clearly stated; most probably
+                    it is the 1st millennium B.C. The site was a place of worship on a mound with an altar inside 
+                    a gallery surrounded by a wall, as mentioned in the Semitic historical writings and in the Bible.During the Hellenistic period (333 – 64B.C.),rituals changed and Sun worship was the main cult.
+                    Thus the city was known as "Heliopolis" (the City of the Sun) like the greatest Egyptian metropolis. The old gallery was enlarged, and at the eastern side a huge podium was erected in order to
+                    become the base of the temple. However, the temple 
+                    was not constructed and the presence of some huge stones is a testament to this Hellenistic project. The construction of the temple began during Augustus' reign and at the end of Nero's reign
+                    (37 – 68A.D.) and was completed in the 3rd century A.D.
+                    The great gallery was constructed during the 2nd century. 
+            </aside>
+        </section>
+        <div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
+        <section>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="../images/baalbak-details/baalbak-details1.jpg" alt="Baalbak Image Details" style="width:100%;" >
+                  <div class="text">Caption One</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img  src="../images/baalbak-details/baalbak-details2.jpg"  alt="Baalbak Image Details" style="width:100%;">
+                  <div class="text">Caption Two</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="../images/baalbak-details/baalbak-details3.jpg"  alt="Baalbak Image Details" style="width:100%;">
+                  <div class="text">Caption Three</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+        </section>
+    </main>
+    <footer>
+        <h4> &copy;2022 Lebanon ministry of tourism. website by Hassan | www.hassan.com</h4>
+    </footer>
+</body>
+</html>
